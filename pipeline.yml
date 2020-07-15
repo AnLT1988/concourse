@@ -6,8 +6,6 @@ resources:
     source:
       uri: {{GIT_URI}}
       branch: {{GIT_BRANCH}}
-      private_key: {{GIT_KEY}}
-      skip_ssl_verification: true
 
 jobs:
   - name: my-first-job
