@@ -1,0 +1,34 @@
+---
+
+resources:
+  - name: resource-tutorial
+    type: git
+    source:
+      uri: https://github.com/starkandwayne/concourse-tutorial.git
+      branch: develop
+
+  - name: task-for-((ENV_DEV))
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: busybox}
+      run:
+        path: echo
+        args: [hey there!!!]
+
+jobs:
+  - name: my-first-job
+    public: true
+    plan:
+      - get: resource-tutorial
+      - task: task-for-((ENV_DEV))
+      - task: first-task-of-the-first-job
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: {repository: busybox}
+          run:
+            path: echo
+            args: [hey there!!!]
