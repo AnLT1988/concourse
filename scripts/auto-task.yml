@@ -5,5 +5,4 @@ image_resource:
   source: {repository: busybox}
 
 run:
-  path: cat
-  args: [my-repo/readme.md]
+  path: my-repo/scripts/my_script.sh
