@@ -2,5 +2,5 @@
 ENV_DEV         : DEV
 ENV_QA          : QA
 
-GIT_URI         : ssh://git@github.com:anlt1988/concourse.git
+GIT_URI         : https://github.com/anlt1988/concourse.git
 GIT_BRANCH      : master
