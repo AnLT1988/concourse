@@ -1,6 +1,7 @@
 #!bin/bash
+set -o xtrace
+
 pwd
-cd ../../
 ls -ltr 
 
-cat readme.md
+cat my-repo/readme.md
