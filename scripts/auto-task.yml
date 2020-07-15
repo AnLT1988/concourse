@@ -8,5 +8,5 @@ inputs:
   - name: my-repo
 
 run:
-  path: ls
+  path: ls my-repo
   args: [-ltr]
