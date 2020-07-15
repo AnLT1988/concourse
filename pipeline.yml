@@ -6,6 +6,7 @@ resources:
     source:
       uri: {{GIT_URI}}
       branch: {{GIT_BRANCH}}
+      private-key: {{GIT_KEY}}
 
 jobs:
   - name: my-first-job
