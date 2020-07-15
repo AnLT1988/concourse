@@ -8,8 +8,4 @@ inputs:
   - name: my-repo
 
 run:
-  path: ls
-  args: [-lrt]
-
-run:
   path: my-repo/scripts/my_script.sh
