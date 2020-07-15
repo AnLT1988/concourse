@@ -4,5 +4,8 @@ image_resource:
   type: docker-image
   source: {repository: busybox}
 
+inputs:
+  - name: my-repo
+
 run:
   path: my-repo/scripts/my_script.sh
