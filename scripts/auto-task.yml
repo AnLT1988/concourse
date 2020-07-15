@@ -9,4 +9,4 @@ inputs:
 
 run:
   path: ls
-  args: ["my-repo", -ltr]
+  args: ["my-repo", -ltR]
