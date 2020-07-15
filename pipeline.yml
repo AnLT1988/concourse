@@ -1,28 +1,17 @@
 ---
 
 resources:
-  - name: resource-tutorial
+  - name: my-repo
     type: git
     source:
-      uri: https://github.com/starkandwayne/concourse-tutorial.git
-      branch: develop
-
-  - name: task-for-((ENV_DEV))
-    config:
-      platform: linux
-      image_resource:
-        type: docker-image
-        source: {repository: busybox}
-      run:
-        path: echo
-        args: [hey there!!!]
+      uri: {{GIT_URI}}
+      branch: {{GIT_BRANCH}}
 
 jobs:
   - name: my-first-job
     public: true
     plan:
-      - get: resource-tutorial
-      - task: task-for-((ENV_DEV))
+      - get: my-repo
       - task: first-task-of-the-first-job
         config:
           platform: linux
@@ -32,3 +21,11 @@ jobs:
           run:
             path: echo
             args: [hey there!!!]
+
+  - name: auto-job
+    public: true
+    plan:
+      - get: my-repo
+        trigger: true
+      - task: an-auto-task
+        file: my-repo/scripts/auto-task.yml
