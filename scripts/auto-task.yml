@@ -1,0 +1,9 @@
+---
+platform: linux
+image_resource:
+  type: docker_image
+  source: {repository: busybox}
+
+run:
+  path: cat
+  args: [my-repo/readme.md]
