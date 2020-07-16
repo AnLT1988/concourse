@@ -7,6 +7,11 @@ image_resource:
 inputs:
   - name: my-repo
 
+params:
+  FIRST:
+  SECOND:
+  THIRD:
+
 run:
   path: /bin/sh
   args: ["my-repo/scripts/my_script.sh"]

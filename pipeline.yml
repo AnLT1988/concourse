@@ -1,5 +1,11 @@
 ---
 
+resource_types:
+  - name: my-type
+    type: docker-image
+    source:
+      repository: busybox
+
 resources:
   - name: my-repo
     type: git
@@ -30,3 +36,26 @@ jobs:
         trigger: true
       - task: an-auto-task
         file: my-repo/scripts/auto-task.yml
+
+  - name: parameters
+    public: true
+    plan:
+      - get: my-repo
+      - task: first-task
+        file: my-repo/scripts/auto-task.yml
+        params:
+          FIRST: First params
+          THIRD: Surprise
+        vars:
+          FIRST_VAR: Var value
+          SECOND_VAR: Var value 2
+      - task: second-task
+        config:
+          platform: linux
+          image_resource:
+            type: docker-image
+            source: {repository: busybox}
+          run:
+            path: printenv
+        params:
+          PARAM: Param value
