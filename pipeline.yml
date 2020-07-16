@@ -10,7 +10,7 @@ resources:
   - name: my-repo
     type: git
     source:
-      uri: {{GIT_URI}}
+      uri: {{GIT_URI_HTTPS}}
       branch: {{GIT_BRANCH}}
       private-key: {{GIT_KEY}}
 
