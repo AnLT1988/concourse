@@ -8,6 +8,7 @@ inputs:
   - name: my-repo
 outputs:
   - name: output
+  - name: my-repo
 
 run:
   path: /bin/sh
