@@ -12,4 +12,4 @@ outputs:
 
 run:
   path: /bin/sh
-  args: ["my-repo/scripts/my_script.sh"]
+  args: ["my-repo/scripts/make_dir.sh"]
