@@ -59,3 +59,12 @@ jobs:
             path: printenv
         params:
           PARAM: Param value
+
+  - name: input-output
+    public: true
+    plan:
+      - get: my-repo
+      - task: make-dir-task
+        file: my-repo/scrips/make_dir.yml
+      - task: read-dir-task
+        file: my-repo/scripts/consume_dir.yml
