@@ -4,7 +4,7 @@ set -o xtrace
 
 pwd
 
-output_dir = $pwd/output
+output_dir=$pwd/output
 
 mkdir -p $output_dir
 chmod 0777 $output_dir
