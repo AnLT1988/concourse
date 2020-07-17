@@ -5,6 +5,7 @@ set -o xtrace
 pwd
 ls -lR
 
+cat output/output_file.txt
 cd my-repo
 
 ls -lR
