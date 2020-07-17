@@ -5,7 +5,7 @@ set -o xtrace
 pwd
 ls -lR
 
-cd my-repos
+cd my-repo
 
 ls -lR
 
