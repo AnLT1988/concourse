@@ -6,7 +6,6 @@ image_resource:
 
 inputs:
   - name: my-repo
-  - name: output 
 
 run:
   path: /bin/sh
