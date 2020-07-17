@@ -73,8 +73,12 @@ jobs:
       - get: my-repo
       - task: make-dir-task
         file: my-repo/scripts/make_dir.yml
+        output_mapping:
+          - output: my-repo
       - task: read-dir-task
         file: my-repo/scripts/consume_dir.yml
+        input_mapping:
+          - mapped_input: output
         params:
           somevar: just some var
         vars:
