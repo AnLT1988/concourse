@@ -65,6 +65,6 @@ jobs:
     plan:
       - get: my-repo
       - task: make-dir-task
-        file: my-repo/scrips/make_dir.yml
+        file: my-repo/scripts/make_dir.yml
       - task: read-dir-task
         file: my-repo/scripts/consume_dir.yml
