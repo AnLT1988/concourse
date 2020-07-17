@@ -6,6 +6,7 @@ image_resource:
 
 inputs:
   - name: my-repo
+  - name: mapped_input
 outputs:
   - name: my-repo
 
