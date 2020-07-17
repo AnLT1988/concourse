@@ -68,3 +68,5 @@ jobs:
         file: my-repo/scripts/make_dir.yml
       - task: read-dir-task
         file: my-repo/scripts/consume_dir.yml
+        params:
+          somevar: just some var

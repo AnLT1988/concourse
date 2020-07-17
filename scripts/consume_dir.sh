@@ -12,3 +12,5 @@ ls -lR
 
 cat output/output_file.txt
 
+echo $somevar
+
