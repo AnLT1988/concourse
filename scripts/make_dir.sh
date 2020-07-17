@@ -4,7 +4,7 @@ set -o xtrace
 
 pwd
 
-output_dir=$pwd/output
+output_dir=$PWD/output
 
 ls -l
 ls my-repo-2
