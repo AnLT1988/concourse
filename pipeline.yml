@@ -13,6 +13,12 @@ resources:
       uri: {{GIT_URI_HTTPS}}
       branch: {{GIT_BRANCH}}
       private-key: {{GIT_KEY}}
+  - name: my-repo-2
+    type: git
+    source:
+      uri: {{GIT_URI_HTTPS}}
+      branch: {{GIT_BRANCH}}
+      private-key: {{GIT_KEY}}
 
 jobs:
   - name: my-first-job
@@ -41,6 +47,7 @@ jobs:
     public: true
     plan:
       - get: my-repo
+      - get: my-repo-2
       - task: first-task
         file: my-repo/scripts/auto-task.yml
         params:
@@ -70,3 +77,5 @@ jobs:
         file: my-repo/scripts/consume_dir.yml
         params:
           somevar: just some var
+        vars:
+          env_var: environent var dont show up here

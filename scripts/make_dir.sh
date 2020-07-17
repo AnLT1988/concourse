@@ -7,6 +7,7 @@ pwd
 output_dir=$pwd/output
 
 ls -l
+ls my-repo-2
 
 mkdir -p $output_dir
 chmod 0777 $output_dir
